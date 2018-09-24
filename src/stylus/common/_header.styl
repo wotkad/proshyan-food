@@ -1,0 +1,192 @@
+.menu__overlay
+	position fixed
+	right 40px
+	top 40px
+	height 50px
+	width 190px
+	box-shadow 0 0 10px $black
+	z-index 999
+#menu
+	position fixed
+	top 0
+	display flex
+	align-items flex-end
+	justify-content flex-end
+	right 40px
+	left 30%
+	overflow hidden
+	height 90px
+	z-index 9998
+	.menu
+		position relative
+		width 190px
+		height 50px
+		z-index 99999
+		&__controls
+			overflow hidden
+			height 50px
+			display flex
+			position absolute
+			width 50px
+			&-button
+				background-color $brown
+				display flex
+				align-items center
+				justify-content center
+				height 50px
+				width 50px
+				padding 15px 12px
+				position absolute
+				top 0
+				transition .3s
+				cursor pointer
+				z-index 2
+				svg
+					fill $white
+					width 26px
+					height 26px
+			&-close
+				background-color $brown
+				display flex
+				align-items center
+				justify-content center
+				height 50px
+				width 50px
+				padding 15px 12px
+				position absolute
+				top -50px
+				transition .3s
+				cursor pointer
+				z-index 2
+				svg
+					fill $white
+					width 26px
+					height 26px
+		&__lang
+			width 140px
+			background-color $white
+			height 50px
+			display flex
+			justify-content center
+			align-items center
+			margin-left 50px
+			position absolute
+			z-index 2
+			&-link
+				flex-basis 33.33334%
+				background $white
+				height 50px
+				display flex
+				align-items center
+				justify-content center
+				transition .3s
+				position relative
+				font-family $Regular
+				font-size 0.75rem
+				line-height 16px
+				&:after
+					content ''
+					width 20px
+					position absolute
+					bottom 10px
+					opacity 0
+					transition .3s
+					transform translateY(2px)
+					height 2px
+					background-color $brown
+				&:hover:after
+					opacity 1
+					transform translateY(0px)
+		.menu__list
+			display flex
+			position absolute
+			transform translateX(0)
+			bottom 0
+			height 50px
+			background-color $white
+			transition .3s
+			z-index 0
+			border 1px solid $brown
+			border-right none
+			&-link
+				display flex
+				justify-content center
+				align-items center
+				font-family $Regular
+				font-size 1rem
+				line-height 16px
+				padding 0 24px
+				position relative
+				&:after
+					content ''
+					width 50px
+					position absolute
+					bottom 10px
+					opacity 0
+					transition .3s
+					transform translateY(2px)
+					height 2px
+					background-color $brown
+				&:hover:after
+					opacity 1
+					transform translateY(0px)
+				&:before
+					content ''
+					width 1px
+					position absolute
+					right 0
+					transform translateY(2px)
+					height 10px
+					background-color $brown
+			&-link:last-child:before
+				display none
+	.mob__list
+		display none
+		transform translateX(100%)
+		flex-direction column
+		position absolute
+		transition .3s
+		width 100%
+		top 50px
+		background-color $white
+		&-link
+			display flex
+			justify-content center
+			align-items center
+			font-size 1rem
+			line-height 16px
+			padding 16px 24px
+			font-family $Regular
+			color $black
+			position relative
+			&:after
+				content ''
+				width 50px
+				position absolute
+				bottom 10px
+				opacity 0
+				transition .3s
+				transform translateY(2px)
+				height 2px
+				background-color $brown
+			&:hover:after
+				opacity 1
+				transform translateY(0px)
+@media(max-width:55rem)
+	.menu__overlay
+		display none
+	#menu
+		overflow visible
+		left 0
+		right 0
+		height 50px
+		.menu
+			position absolute
+			top 0
+			left 0
+			width 100%
+			background-color $white
+			box-shadow 0 0 10px $black
+			&__lang
+				margin-left 0
+				left calc(50% - 70px)

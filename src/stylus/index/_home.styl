@@ -1,0 +1,167 @@
+.home
+	background url(/images/home-bg.jpg) 50% 50%
+	background-repeat no-repeat
+	background-size cover
+	height 100vh
+	display flex
+	align-items center
+	justify-content center
+	position relative
+	&__productlink
+		font-size 1.125rem
+		line-height 23px
+		font-family $Regular
+		color $white
+		border-bottom 1px dashed rgba(255,255,255,.4)
+		width 92px
+		padding-bottom 3px
+		position absolute
+		left calc(50% - 46px)
+		bottom 45px
+		text-align center
+		z-index 3
+		transition .3s
+		&:hover
+			border-bottom 1px dashed $brown
+.home__overlay
+	background $gradient
+	height 380px
+	position absolute
+	z-index: 2
+	bottom 0
+	left 0
+	right 0
+.homecontent
+	display flex
+	max-width 677px
+	flex-direction column
+	&__logo
+		flex-basis 100%
+		align-items center
+		justify-content center
+		display flex
+		margin-bottom 47px
+		img
+			max-width 350px
+	&__desc
+		display flex
+		flex-wrap wrap
+		z-index 3
+		&-item
+			display flex
+			flex-basis 50%
+			padding 0px 0 30px 0
+			&-image
+				margin-right 25px
+			&-text
+				font-size 1.125rem
+				line-height 23px
+				font-family $Regular
+				color $white
+		&-item:nth-child(odd)
+			padding-right 44px
+		&-item:nth-child(even)
+			padding-left 44px
+.rightnav
+	position fixed
+	z-index 3
+	top calc(50% - 100px)
+	right 39px
+	&__block
+		display flex
+		flex-direction column
+		justify-content space-between
+		height 200px
+		width 15px
+		&-dot
+			border 2px solid $brown
+			background-color $white
+			border-radius 50%
+			width 15px
+			height 15px
+			position relative
+			transition .3s
+			&:after
+				content ''
+				width 1px
+				background-color $brown
+				height 24px
+				position absolute
+				left 5px
+				top: 11px
+			&:hover
+				border-color $white
+				background-color $brown
+				.rightnav__block-dot-hint
+					opacity 1
+			&-hint
+				border 1px solid $brown
+				background-color $white
+				border-radius 5px
+				padding 4px
+				position absolute
+				font-family $Regular
+				font-size 0.625rem
+				line-height 12px
+				right 25px
+				bottom -6px
+				text-align center
+				min-width 70px
+				opacity 0
+				transition opacity .3s
+				z-index 4
+				&:after
+					content ''
+					position absolute
+					border: 5px solid transparent;
+					border-left: 5px solid $brown
+					right -15px
+					bottom 5px
+		&-dot:last-child
+			&:after
+				display none
+		&-dot-active
+			border-color $white
+			background-color $brown
+			&:hover
+				background-color $brown
+			.rightnav__block-dot-hint
+				opacity 1
+@media(max-width:55rem)
+	.home
+		margin-top 50px
+		height calc(100vh - 50px)
+	.homecontent__desc
+		display flex
+		flex-wrap wrap
+		z-index 3
+		&-item:nth-child(odd),
+		&-item:nth-child(even)
+			display flex
+			flex-basis 100%
+			padding 0
+			align-items center
+			justify-content center
+			margin-bottom 20px
+			padding 0 10px
+	.rightnav
+		top 60px
+		right calc(50% - 100px)
+		&__block
+			display flex
+			flex-direction row
+			height 15px
+			width 200px
+			&-dot
+				&:after
+					content ''
+					width 22px
+					background-color $brown
+					height 1px
+					position absolute
+					left 13px
+					top: 5px
+				&-hint
+					right -30px
+					bottom -60px
+					transform rotate(-90deg)

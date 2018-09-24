@@ -1,0 +1,100 @@
+.contacts
+	padding 80px 0 20px 0
+	&__breadcrums
+		display flex
+		flex-basis 100%
+		justify-content center
+		align-items center
+		margin-bottom 5px
+		&-link
+			display inline-block
+			color $darkergray
+			font-family $Redular
+			font-size 0.875rem
+			border-bottom 1px solid $darkergray
+			transition .3s
+			&-child
+				border-bottom none
+				color $darkgray
+				font-family $Redular
+				font-size 0.875rem
+			&:hover
+				border-color $brown
+		& svg,
+		& svg path
+			margin 0 8px
+			width 10px
+			height 10px
+			fill $darkergray
+	&__title
+		font-family $Bold
+		font-size 2.75rem
+		line-height 57px
+		color $brown
+		text-align center
+		margin-bottom 60px
+	&__block
+		display flex
+		justify-content space-between
+		&-map
+			flex-basis 66.66667%
+			max-width 66.66667%
+			box-shadow 0px 4px 50px rgba(0, 0, 0, 0.05)
+		&-info
+			flex-basis 33.33334%
+			max-width 33.33334%
+			margin-left 20px
+			padding 30px 20px 30px 40px
+			border 2px solid $brown
+			box-shadow 0px 4px 50px rgba(0, 0, 0, 0.05)
+			background-color $white
+			&-title
+				color $brown
+				line-height 26px
+				font-size 1.25rem
+				font-family $Bold
+				margin-bottom 30px
+			&-subtitle
+				font-family $Bold
+				font-size 0.75rem
+				color $grayprodtitle
+				line-height 23px
+				text-transform uppercase
+				letter-spacing 2px
+				margin-bottom 10px
+			&-text
+				font-family $Regular
+				color $black
+				font-size 1.125rem
+				line-height 35px
+			&-link
+				font-family $Regular
+				color $black
+				font-size 1.125rem
+				line-height 35px
+				position relative
+				&:after
+					content ''
+					width 100%
+					position absolute
+					bottom -2px
+					left 0
+					opacity 0
+					transition .3s
+					transform translateY(2px)
+					height 2px
+					background-color $brown
+				&:hover:after
+					opacity 1
+					transform translateY(0px)
+@media(max-width:56.25rem)
+	.contacts__block
+		flex-wrap wrap-reverse
+		&-map
+			flex-basis 100%
+			max-width 100%
+		&-info
+			flex-basis 100%
+			max-width 100%
+			margin-left 0
+			margin-bottom 20px

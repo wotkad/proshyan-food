@@ -1,0 +1,36 @@
+.about
+	display flex
+	padding 80px 0
+	&__image
+		flex-basis 50%
+		z-index 2
+		height 350px
+	&__block
+		flex-basis 55%
+		z-index 1
+		padding 40px 40px 40px 89px
+		border 3px solid $brown
+		margin-left -5%
+		margin-top 36px
+		margin-bottom -36px
+		display flex
+		flex-direction column
+		&-title
+			color $brown
+			font-size 2rem
+			line-height 41px
+			font-family $Bold
+			margin-bottom 30px
+		&-text
+			font-family $Regular
+			line-height 29px
+			color 1rem
+@media(max-width:62.5rem)
+	.about
+		padding 40px 0
+		&__image
+			display none
+		&__block
+			flex-basis 100%
+			margin 0
+			padding 40px

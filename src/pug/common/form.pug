@@ -1,0 +1,10 @@
+.g-wrapper
+	.form
+		.form__title Обратная связь
+		form.form__container(action="#")
+			input.form__container-input(required="required" name="name" type="text" placeholder="Как вас зовут?")
+			input.form__container-input(required="required" name="phone" type="tel" placeholder="Ваш номер телефона")
+			input.form__container-input(required="required" name="text" type="text" placeholder="Ваше сообщение")
+			button(type='submit').form__container-button Отправить
+			.form__container-policy Нажимая кнопку «Отправить» вы соглашаетесь c
+				.form__container-policy-link политикой обработки персональных данных

@@ -1,0 +1,149 @@
+#blog
+	overflow-x hidden
+.blog
+	padding 80px 0
+	position relative
+	&__slider
+		display flex
+		position relative
+	&__title
+		font-family $Bold
+		font-size 2.75rem
+		line-height 57px
+		color $brown
+		text-align center
+		margin-bottom 50px
+	&__post
+		transition .3s
+		box-shadow 0px 4px 30px rgba(0, 0, 0, 0.05)
+		&-image
+			height 240px
+		&-desc
+			flex-basis 50%
+			background-color $white
+			padding 25px 30px 29px 30px
+			display flex
+			flex-direction column
+			justify-content space-between
+			min-height 210px
+			align-items flex-start
+			background-color $white
+			&-title
+				font-family $Bold
+				line-height 20px
+				font-size 1.25rem
+				margin-bottom 10px
+				color $brown
+				position relative
+				&:after
+					content ''
+					width 100px
+					position absolute
+					bottom -12px
+					opacity 0
+					transition .3s
+					transform translateY(2px)
+					height 2px
+					left 0
+					background-color $brown
+			&-date
+				font-size 0.875rem
+				line-height 18px
+				font-family $Regilar
+				margin-bottom 25px
+				color $darkgray
+			&-link
+				font-family $Regilar
+				font-size 1.125rem
+				line-height 23px
+				position relative
+				overflow hidden
+				margin-left 5px
+				display inline-block
+				color $brown
+				border-bottom 1px dashed $brown
+				&:after
+					content ''
+					width 25px
+					position absolute
+					bottom 10px
+					opacity 0
+					transition .3s
+					transform translateY(2px)
+					height 2px
+					background-color $brown
+				&:hover:after
+					opacity 1
+					transform translateY(0px)
+			&-link p
+				z-index 3
+				position relative
+				display inline-block
+		&:hover .blog__post-desc-title:after
+			opacity 1
+			transform translateY(0px)
+	&__link
+		background-color $brown
+		color $white
+		padding 12px 76px 14px 76px
+		font-family $Regular
+		line-height 23px
+		font-size 1.125rem
+		text-align center
+		max-width 280px
+		display block
+		margin 45px auto 0 auto
+		position relative
+		&:after
+			content ''
+			width 50px
+			position absolute
+			bottom 10px
+			opacity 0
+			transition .3s
+			transform translateY(2px)
+			height 2px
+			background-color $white
+			left calc(50% - 25px)
+		&:hover:after
+			opacity 1
+			transform translateY(0px)
+.swiper-button-prev, .swiper-button-next
+	width 60px
+	height 60px
+	top calc(50% - 30px)
+	background-size auto
+	z-index 1
+	display flex
+	align-items center
+	justify-content center
+.swiper-button-prev
+	background-image none
+	border-radius 50%
+	padding-right 3px
+	background-color $brown
+	left -30px
+.swiper-button-next
+	background-image none
+	border-radius 50%
+	padding-left 3px
+	background-color $brown
+	right -30px
+.swiper-pagination-bullets
+	display none
+@media(max-width:64.375rem)
+	.swiper-button-prev, .swiper-button-next
+		display none
+	.swiper-pagination-bullets
+		display inline-block
+		width: 100%;
+		bottom: -30px;
+	.swiper-pagination-bullet
+		width 16px
+		height 16px
+		border 1px solid $brown
+		background-color $white
+		opacity 1
+		margin 0 5px
+	.swiper-pagination-bullet-active
+		background-color $brown

@@ -1,0 +1,141 @@
+.blogdetail
+	padding 80px 0
+	& progress
+		position fixed
+		left 0
+		top 0
+		width 100%
+		height 5px
+		z-index 3
+		border none
+		background transparent
+		color $brown
+		.progress__container
+			width 100%
+			background transparent
+			position fixed
+			top 0
+			left 0
+			height 5px
+			display block
+			&-bar
+				background $brown
+				width 0%
+				display block
+				height inherit
+	& progress::-webkit-progress-bar
+		background transparent
+	& progress::-webkit-progress-value
+		background $brown
+	& progress::-moz-progress-bar
+		background $brown
+	&__breadcrums
+		display flex
+		flex-basis 100%
+		justify-content center
+		align-items center
+		margin-bottom 5px
+		&-link
+			display inline-block
+			color $darkergray
+			font-family $Redular
+			font-size 0.875rem
+			border-bottom 1px solid $darkergray
+			transition .3s
+			&-child
+				border-bottom none
+				color $darkgray
+				font-family $Redular
+				font-size 0.875rem
+			&:hover
+				border-color $brown
+		& svg,
+		& svg path
+			margin 0 8px
+			width 10px
+			height 10px
+			fill $darkergray
+	&__title
+		font-family $Bold
+		font-size 2.75rem
+		line-height 57px
+		color $brown
+		text-align center
+		margin-bottom 60px
+	&__block
+		display flex
+		flex-direction column
+		box-shadow 0px 4px 30px rgba(0, 0, 0, 0.05)
+		margin-bottom 20px
+		&-image
+			height 340px
+		&:hover .blog__content-blockdesc-title:after
+			opacity 1
+			transform translateY(0px)
+		&-desc
+			padding 50px 60px
+			background-color $white
+			display flex
+			flex-direction column
+			position relative
+			&-title
+				font-size 2rem
+				line-height 41px
+				font-family $Bold
+				color $brown
+				margin-bottom 25px
+				flex-basis 100%
+				position relative
+			&-text
+				font-family $Regular
+				line-height 29px
+				font-size 1rem
+				color $black
+				margin-bottom 40px;
+				flex-basis 100%
+			&-date
+				font-size 1.25rem
+				line-height 26px
+				font-family $Regular
+				color $darkgray
+				display flex
+				justify-content flex-end
+	&__nav
+		display flex
+		justify-content space-between
+		align-items center
+		&-prev
+			border 1px solid $brown
+			padding 12px 20px 14px 20px
+			line-height 23px
+			font-family $Regular
+			font-size 1.125rem
+			color $brown
+			transition .3s
+			& i
+				margin-right 24px
+				transition .3s
+			&:hover
+				color $white
+				background-color $brown
+		&-next
+			border 1px solid $brown
+			padding 12px 20px 14px 20px
+			line-height 23px
+			font-family $Regular
+			font-size 1.125rem
+			color $brown
+			transition .3s
+			& i
+				margin-left 24px
+				transition .3s
+			&:hover
+				color $white
+				background-color $brown
+@media(max-width:55rem)
+	.blogdetail
+		padding 40px 0
+		& progress
+			top 50px
+			.progress__container
+				top 50px

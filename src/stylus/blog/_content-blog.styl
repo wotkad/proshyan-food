@@ -1,0 +1,141 @@
+.blog
+	padding 80px 0
+	&__breadcrums
+		display flex
+		flex-basis 100%
+		justify-content center
+		align-items center
+		margin-bottom 5px
+		&-link
+			display inline-block
+			color $darkergray
+			font-family $Redular
+			font-size 0.875rem
+			border-bottom 1px solid $darkergray
+			transition .3s
+			&-child
+				border-bottom none
+				color $darkgray
+				font-family $Redular
+				font-size 0.875rem
+			&:hover
+				border-color $brown
+		& svg,
+		& svg path
+			margin 0 8px
+			width 10px
+			height 10px
+			fill $darkergray
+	&__title
+		font-family $Bold
+		font-size 2.75rem
+		line-height 57px
+		color $brown
+		text-align center
+		margin-bottom 60px
+	&__container
+		display flex
+		justify-content space-between
+		.blog__content
+			flex-basis 66.66667%
+			&-block
+				display flex
+				flex-direction column
+				box-shadow 0px 4px 30px rgba(0, 0, 0, 0.05)
+				margin-bottom 20px
+				&-image
+					height 340px
+				&:hover .blog__content-blockdesc-title:after
+					opacity 1
+					transform translateY(0px)
+			&-block:last-child
+				margin-bottom 40px
+			&-blockdesc
+				padding 25px 30px 45px 30px
+				background-color $white
+				display flex
+				flex-direction column
+				position relative
+				&-title
+					font-size 2rem
+					line-height 41px
+					font-family $Bold
+					color $brown
+					margin-bottom 25px
+					flex-basis 100%
+					position relative
+					&:after
+						content ''
+						width 200px
+						position absolute
+						bottom -12px
+						opacity 0
+						transition .3s
+						transform translateY(2px)
+						height 2px
+						left 0
+						background-color $brown
+				&-text
+					font-family $Regular
+					line-height 29px
+					font-size 1rem
+					color $black
+					margin-bottom 40px;
+					flex-basis 100%
+				&-link
+					font-size 1.125rem
+					line-height 23px
+					font-family $Regular
+					color $brown
+					position absolute
+					bottom 45px
+					transition .3s
+					border-bottom 1px dashed $brown
+					&:hover
+						border-color $black
+				&-date
+					font-size 1.25rem
+					line-height 26px
+					font-family $Regular
+					color $darkgray
+					display flex
+					justify-content flex-end
+			&-nav
+				display flex
+				justify-content center
+				&-item
+					border 1px solid $brown
+					background-color $white
+					color $brown
+					font-size 1.125rem
+					line-height 23px
+					font-family $Regular
+					margin 0 5px
+					transition .3s
+					height 50px
+					width 50px
+					display flex
+					align-items center
+					justify-content center
+					&:hover
+						background-color $brown
+						color $white
+				&-item-active
+					background-color $brown
+					color $white
+		.blog__sidebar
+			flex-basis 33.33334%
+			margin-left 20px
+@media(max-width:55rem)
+	.blog
+		padding 40px 0
+		&__container
+			display flex
+			justify-content space-between
+			flex-wrap wrap-reverse
+			.blog__content
+				flex-basis 100%
+			.blog__sidebar
+				display flex
+				flex-basis 100%
+				margin-left 0
