@@ -1,0 +1,64 @@
+.errorpage
+	padding 80px 0
+	&__breadcrums
+		display flex
+		flex-basis 100%
+		justify-content center
+		align-items center
+		margin-bottom 5px
+		&-link
+			display inline-block
+			color $darkergray
+			font-family $Redular
+			font-size 0.875rem
+			border-bottom 1px solid $darkergray
+			transition .3s
+			&-child
+				border-bottom none
+				color $darkgray
+				font-family $Redular
+				font-size 0.875rem
+			&:hover
+				border-color $brown
+		& svg,
+		& svg path
+			margin 0 8px
+			width 10px
+			height 10px
+			fill $darkergray
+	&__container
+		display flex
+		align-items center
+		justify-content center
+		flex-direction column
+		&-title
+			text-align center
+			padding 60px 0 40px
+			& span:nth-child(1)
+				font-family $Bold
+				font-size 10rem
+				line-height 108px
+			& p
+				margin-left 10px
+				font-family $Regular
+				font-size 2rem
+				line-height 44px
+		&-text
+			font-family $Regular
+			font-size 1.125rem
+			line-height 27px
+			margin-bottom 40px
+		&-link
+			border 1px solid $brown
+			padding 12px 20px 14px 20px
+			line-height 23px
+			font-family $Regular
+			font-size 1.125rem
+			color $brown
+			transition .3s
+			& i
+				transition .3s
+				margin-right 12px
+			&:hover
+				color $white
+				background-color $brown
