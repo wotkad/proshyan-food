@@ -190,6 +190,7 @@ $(document).ready(function() {
     var siteContent = document.querySelector('.wrapper');
     setTimeout(() => siteContent.classList.add('render'), 1337);
 	setTimeout(() => preloader.style.display = 'none', 1300);
+	setTimeout(() => loadercircle.style.opacity = '0', 1100);
 })
 
 // scroll is off until document is not ready
