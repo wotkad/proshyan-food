@@ -91,7 +91,8 @@
   line-height: 23px;
   font-family: $Regular;
   font-size: 1.125rem;
-  color: $brown;
+  color: $white;
+  background-color: $brown;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -103,6 +104,6 @@
   margin-right: 12px;
 }
 .errorpage__container-link:hover {
-  color: $white;
-  background-color: $brown;
+  color: $brown;
+  background-color: $white;
 }
