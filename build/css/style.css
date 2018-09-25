@@ -3235,7 +3235,8 @@ section {
   line-height: 23px;
   font-family: PT-Regular;
   font-size: 1.125rem;
-  color: #bc9a6a;
+  color: #fff;
+  background-color: #bc9a6a;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -3247,6 +3248,6 @@ section {
   margin-right: 12px;
 }
 .errorpage__container-link:hover {
-  color: #fff;
-  background-color: #bc9a6a;
+  color: #bc9a6a;
+  background-color: #fff;
 }
