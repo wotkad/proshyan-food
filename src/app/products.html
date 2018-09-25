@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Proshyan Food</title>
-    <link rel="stylesheet" href="/css/libs.min.css"/>
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/app/css/libs.min.css"/>
+    <link rel="stylesheet" href="/app/css/style.css"/>
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
     <script src="/vendor/modernizr/modernizr-custom.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -36,27 +36,77 @@
       <section id="subheader">
         <div class="subheader-bg"><a class="subheader__logo" href="/"><img src="/images/logo.png"/></a></div>
       </section>
-      <section id="content-detail-blog">
+      <section id="products">
         <div class="g-wrapper">
-          <div class="blogdetail">
-            <progress value="0">
-              <div class="progress__container"><span class="progress-container-bar"></span></div>
-            </progress>
-            <div class="blogdetail__breadcrums"><a class="blogdetail__breadcrums-link" href="/">Главная</a><svg width="11" height="19" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg" fill="none"><path d="M10.4 9.3C10.6 9.4 10.6 9.6 10.6 9.7 10.6 9.9 10.6 10 10.4 10.1L2.1 18.4C2 18.6 1.9 18.6 1.7 18.6 1.6 18.6 1.4 18.6 1.3 18.4L0.4 17.6C0.3 17.4 0.2 17.3 0.2 17.1 0.2 17 0.3 16.9 0.4 16.7L7.4 9.7 0.4 2.7C0.3 2.6 0.2 2.4 0.2 2.3 0.2 2.1 0.3 2 0.4 1.9L1.3 1C1.4 0.9 1.6 0.8 1.7 0.8 1.9 0.8 2 0.9 2.1 1L10.4 9.3Z" fill="white"/></svg><a class="blogdetail__breadcrums-link blogdetail__breadcrums-link-child" href="/blog/">Блог</a></div>
-            <div class="blogdetail__title">Блог</div>
-            <div class="blogdetail__block">
-              <div class="blogdetail__block-image" style="background: url(/images/blog-image.jpg) 50% 50%; background-size: cover; background-repeat: no-repeat;"></div>
-              <div class="blogdetail__block-desc">
-                <div class="blogdetail__block-desc-title">Гипотеза категорически рассматривается принцип восприятия</div>
-                <div class="blogdetail__block-desc-text">
-                  <p>Апостериори, бабувизм создает язык образов. Дедуктивный метод, следовательно, порождает и обеспечивает напряженный закон внешнего мира. Дилемма порождает и обеспечивает примитивный предмет деятельности. Ассоциация подрывает бабувизм.<br/><br/></p>
-                  <p>Знак прост. Антропосоциология, следов	ательно, творит неоднозначный бабувизм, изменяя привычную реальность. Адаптация естественно индуцирует дуализм, ломая рамки привычных представлений. Дуализм, по определению, заполняет позитивизм.<br/><br/></p>
-                  <p>Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако суждение порождает и обеспечивает дедуктивный метод. Принцип восприятия, как принято считать, решительно принимает во внимание структурализм, открывая новые горизонты. Исчисление предикатов естественно понимает под собой сложный конфликт. Интересно отметить, что заблуждение порождает и обеспечивает гравитационный парадокс. Даосизм, по определению, абстрактен.</p>
-                </div>
-                <div class="blogdetail__block-desc-date">03.04.2018</div>
-              </div>
-            </div>
-            <div class="blogdetail__nav"><a class="blogdetail__nav-prev" href="#"><i class="fa fa-long-arrow-left"></i><span>Предыдущая статья</span></a><a class="blogdetail__nav-next" href="#"><span>Следующая статья</span><i class="fa fa-long-arrow-right"></i></a></div>
+          <div class="products">
+            <div class="products__breadcrums"><a class="products__breadcrums-link" href="/">Главная</a><svg width="11" height="19" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg" fill="none"><path d="M10.4 9.3C10.6 9.4 10.6 9.6 10.6 9.7 10.6 9.9 10.6 10 10.4 10.1L2.1 18.4C2 18.6 1.9 18.6 1.7 18.6 1.6 18.6 1.4 18.6 1.3 18.4L0.4 17.6C0.3 17.4 0.2 17.3 0.2 17.1 0.2 17 0.3 16.9 0.4 16.7L7.4 9.7 0.4 2.7C0.3 2.6 0.2 2.4 0.2 2.3 0.2 2.1 0.3 2 0.4 1.9L1.3 1C1.4 0.9 1.6 0.8 1.7 0.8 1.9 0.8 2 0.9 2.1 1L10.4 9.3Z" fill="white"/></svg><a class="products__breadcrums-link products__breadcrums-link-child" href="/products/">Продукция</a></div>
+            <div class="products__title">Продукция</div>
+            <div class="products__categories"><a class="products__categories-item products__categories-item-active" href="#">Овощная консервация</a><a class="products__categories-item" href="#">Грибная консервация</a><a class="products__categories-item" href="#">Варенья и джемы</a><a class="products__categories-item" href="#">Салаты</a><a class="products__categories-item" href="#">Закуски</a><a class="products__categories-item" href="#">Икра</a><a class="products__categories-item" href="#">Компоты</a></div>
+            <div class="products__grid"><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image1.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image2.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image3.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image4.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image5.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image6.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image7.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image8.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a><a class="products__grid-item" href="#">
+                <div class="products__grid-item-image" style="background: url(/images/products/image9.jpg) 50% 50%; background-repeat: no-repeat; background-size: cover;">
+                  <div class="products__overlay"></div>
+                  <div class="products__grid-item-image-imagedesc">
+                    <div class="products__grid-item-image-imagedesc-title">Бамия маринованная</div>
+                    <div class="products__grid-item-image-imagedesc-text">Освобождение, как принято считать, создает трансцендентальный предмет деятельности. Аналогия творит данный гравитационный парадокс.</div>
+                  </div>
+                </div></a></div>
+            <div class="products__nav"><a class="products__nav-item products__nav-item-active" href="#">1</a><a class="products__nav-item" href="#">2</a><a class="products__nav-item" href="#">3</a><a class="products__nav-item" href="#">...</a><a class="products__nav-item" href="#">10</a></div>
           </div>
         </div>
       </section>

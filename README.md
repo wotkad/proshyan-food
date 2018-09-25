@@ -16,7 +16,7 @@ DEVELOPMENT MODE
 	cd ProjectPath/
 	$ gulp watch
 
-project will be run on -> localhost:3000
+project will be run on -> localhost:3000/app
 
 BUILD PROJECT
 -

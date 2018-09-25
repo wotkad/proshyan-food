@@ -5,8 +5,8 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title Proshyan Food
-		link(rel="stylesheet", href="/css/libs.min.css")
-		link(rel="stylesheet", href="/css/style.css")
+		link(rel="stylesheet", href="/app/css/libs.min.css")
+		link(rel="stylesheet", href="/app/css/style.css")
 		link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
 		script(src="/vendor/modernizr/modernizr-custom.js")
 		script(src="https://cdn.polyfill.io/v2/polyfill.min.js")
@@ -18,21 +18,21 @@ html
 				.loader-line
 		.wrapper
 			section#header
-				include ./blocks/common/header.pug
+				include ./common/header.pug
 			section#home
-				include ./blocks/index/home.pug
+				include ./index/home.pug
 			section#about
-				include ./blocks/index/about.pug
+				include ./index/about.pug
 			section#products
-				include ./blocks/index/products.pug
+				include ./index/products.pug
 			section#categories
-				include ./blocks/index/categories.pug
+				include ./index/categories.pug
 			section#blog
-				include ./blocks/index/blog.pug
+				include ./index/blog.pug
 			section#social
-				include ./blocks/index/social.pug
+				include ./index/social.pug
 			section#footer
-				include ./blocks/common/footer.pug
-			include ./blocks/common/popup.pug
+				include ./common/footer.pug
+			include ./common/popup.pug
 		script(src="/js/libs.min.js")
 		script(src="/js/main.js")
