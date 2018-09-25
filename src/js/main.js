@@ -120,36 +120,37 @@ var input = document.querySelectorAll('input[type="tel"]')
 }
 
 //right sticky menu
-var menu_selector = ".rightnav__block"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
-function onScroll(){
-	var scroll_top = $(document).scrollTop();
-	$(".rightnav__block-dot").each(function(){
-		var hash = $(this).attr("href");
-		var target = $(hash);
-		if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-			$(menu_selector + " .rightnav__block-dot-active").removeClass("rightnav__block-dot-active");
-			$(this).addClass("rightnav__block-dot-active");
-		} else {
-			$(this).removeClass(".rightnav__block-dot-active");
-		}
-	});
-}
 $(document).ready(function () {
-	$(document).on("scroll", onScroll);
-	$(".rightnav__block-dot").each(function(){ $(this).click(function(e){
-		e.preventDefault();
-		$(document).off("scroll");
-		$(menu_selector + " rightnav__block-dot-active").removeClass("rightnav__block-dot-active");
-		$(this).addClass("rightnav__block-dot-active");
-		var hash = $(this).attr("href");
-		var target = $(hash);
-		$("html, body").animate({
-			scrollTop: target.offset().top
-		}, 500, function(){
-			window.location.hash = hash;
-			$(document).on("scroll", onScroll);
+	var blockScroll = false;
+	function onScroll(){
+		var scroll_top = $(document).scrollTop();
+		$(".rightnav__block-dot").each(function(){
+			var hash = $(this).attr("href");
+			var target = $(hash);
+			if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+				$(".rightnav__block-dot-active").removeClass("rightnav__block-dot-active");
+				$(this).addClass("rightnav__block-dot-active");
+			} else {
+				$(this).removeClass("rightnav__block-dot-active");
+			}
 		});
-	});
+	};
+	$(document).on("scroll", onScroll);
+	$(".rightnav__block-dot").each(function(){
+		$(this).click(function(e){
+			e.preventDefault();
+			$(".rightnav__block-dot-active").removeClass("rightnav__block-dot-active");
+			$(this).addClass("rightnav__block-dot-active");
+			var hash = this.hash;
+			var target = $(hash);
+			blockScroll = true;
+			$("html, body").animate({
+				scrollTop: target.offset().top
+			}, 500, function(){
+				window.location.hash = hash;
+				blockScroll = false;
+			});
+		});
 	});
 });
 
